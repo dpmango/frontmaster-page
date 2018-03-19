@@ -11,6 +11,41 @@
             option(value="Котедж") Котедж
             option(value="Вилла") Вилла
             option(value="Особняк") Особняк
+        .calculate__type
+          input(type="hidden" name="type")
+          .calculate__type-icon
+            i.icon.icon-housingType1
+          .calculate__type-name Двускатная
+          .calculate__type-change Изменить
+          
+          .calculate__type-dropdown
+            +icon('ico-close')
+            .calculate__type-dropdown-grid
+              .calculate__type-el(data-type="1")
+                i.icon.icon-housingType1
+                span Двускатная
+              .calculate__type-el(data-type="2")
+                i.icon.icon-housingType2
+                span Конверт
+              .calculate__type-el(data-type="3")
+                i.icon.icon-housingType3
+                span Двускатная со слуховым окном
+              .calculate__type-el(data-type="4")
+                i.icon.icon-housingType4
+                span Шатровая
+              .calculate__type-el(data-type="5")
+                i.icon.icon-housingType5
+                span Двускатная домашняя
+              .calculate__type-el(data-type="6")
+                i.icon.icon-housingType6
+                span Вальмовая 4-скатная
+              .calculate__type-el(data-type="7")
+                i.icon.icon-housingType7
+                span Вальмовая двускатная
+              .calculate__type-el(data-type="8")
+                i.icon.icon-housingType8
+                span Двускатная с навесом     
+                   
         .banner__form-row
           .banner__form-el
             input(type="text", name="square" , placeholder="Площадь фасада").form-el-custom-size

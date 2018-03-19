@@ -310,6 +310,33 @@ $(document).ready(function(){
   })
 
 
+  // CALCULATE TYPE
+  _document
+    .on('click', '.calculate__type-change', function(e){
+      $('.calculate__type-dropdown').toggleClass('is-active');
+      e.stopPropagation()
+    })
+    .on('click', '.calculate__type-dropdown .ico-close', function(){
+      $('.calculate__type-dropdown').removeClass('is-active')
+    })
+    .on('click', '.calculate__type-el', function(){
+      var dataType = $(this).data('type');
+      $('.calculate__type input').val(dataType);
+
+      var cIcon = $(this).find('.icon').clone();
+      var cName = $(this).find('span').clone();
+
+
+      $('.calculate__type-icon').html(cIcon )
+      $('.calculate__type-name').html( cName )
+      $('.calculate__type-dropdown').removeClass('is-active')
+    })
+    .on('click', function(e){
+      if ( $(e.target).closest('.calculate__type-dropdown').length === 0 ){
+        $('.calculate__type-dropdown').removeClass('is-active')
+      }
+    })
+
   //////////
   // SLIDERS
   //////////
