@@ -85,6 +85,7 @@
       border: 1px solid #e0e0e0
       margin-top: -1px
       margin-right: -1px
+      cursor: pointer
       transition: .25s $ease
       min-height: 160px
       +r($mobile)
@@ -110,7 +111,7 @@
         transform: scale(1.1)
         opacity: 0
         transition: .25s $ease
-      &:hover
+      &:hover, &.is-selected
         z-index: 2
         border-color: $colorOrange
         &::after

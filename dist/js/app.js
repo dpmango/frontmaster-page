@@ -2190,10 +2190,12 @@ $(document).ready(function(){
       var cIcon = $(this).find('.icon').clone();
       var cName = $(this).find('span').clone();
 
-
       $('.calculate__type-icon').html(cIcon )
       $('.calculate__type-name').html( cName )
       $('.calculate__type-dropdown').removeClass('is-active')
+
+      $(this).siblings().removeClass('is-selected');
+      $(this).addClass('is-selected');
     })
     .on('click', function(e){
       if ( $(e.target).closest('.calculate__type-dropdown').length === 0 ){
